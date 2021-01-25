@@ -5,25 +5,19 @@ export const styles = StyleSheet.create(
 
         carContainer: {
             width: '100%',
-            height: Dimensions.get('window').height
-        }
-
-        ,
+            height: Dimensions.get('window').height,
+            position:'relative'
+        },
         titles: {
             marginTop: "30%",
             width: "100%",
             alignItems: "center"
-
-        }
-
-        ,
+        },
         subTitle: {
             fontSize: 16,
             color: '#5c5e62'
 
-        }
-
-        ,
+        },
         title: {
             fontSize: 40,
             fontWeight: '500'
@@ -39,7 +33,7 @@ export const styles = StyleSheet.create(
         },
         buttonContainer:{
             position:'absolute',
-            bottom:50,
+            bottom:80,
             width:'100%',
         },
         subTitleCTA:{

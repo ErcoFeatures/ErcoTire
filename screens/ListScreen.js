@@ -4,10 +4,12 @@ import {StatusBar} from 'expo-status-bar';
 import CartItem from "../component/CartItem";
 import Car from '../component/CarList/cars'
 import CarList from "../component/CarList";
+import Header from "../component/Header";
 
 const ListScreen = () => {
     return (
         <KeyboardAvoidingView behavior="padding" enabled style={styles.container}>
+            <Header/>
             <CarList/>
         </KeyboardAvoidingView>
     );
@@ -19,6 +21,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: "white",
-        justifyContent: 'center'
+        justifyContent: 'center',
+        position:'relative'
     }
 });

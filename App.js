@@ -9,7 +9,7 @@ export default function App() {
   return (
       <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen name="List" component={ListScreen}/>
+          <Stack.Screen name="Item" component={ListScreen}/>
         </Stack.Navigator>
       </NavigationContainer>
   );
@@ -21,5 +21,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+      position:'relative'
   },
 });

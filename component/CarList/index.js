@@ -1,8 +1,7 @@
 import React from 'react';
-import Car from "./cars";
 import CartItem from "../CartItem";
 import {StatusBar} from "expo-status-bar";
-import {View, FlatList} from "react-native";
+import {View, FlatList, Dimensions} from "react-native";
 import {styles} from "./style";
 import cars from  './cars'
 const CarList = () => {
@@ -10,7 +9,11 @@ const CarList = () => {
         <View style={styles.container}>
             <FlatList
                 data={cars}
-                renderItem={({item}, id) => <CartItem  key={id} {...item}/> }
+                showsVerticalScrollIndicator={false}
+                renderItem={({item,id}) => <CartItem  key={id} {...item}/> }
+                snapToAlignment='start'
+                decelerationRate='fast'
+                snapToInterval={Dimensions.get('window').height}
                 />
             <StatusBar style="auto"/>
         </View>
