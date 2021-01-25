@@ -1,12 +1,11 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Dimensions} from 'react-native';
 
 export const styles = StyleSheet.create(
     {
 
         carContainer: {
             width: '100%',
-            height: '100%',
-            position: 'relative'
+            height: Dimensions.get('window').height
         }
 
         ,
@@ -37,6 +36,14 @@ export const styles = StyleSheet.create(
             resizeMode: 'cover',
             position: 'absolute',
             left: 0
+        },
+        buttonContainer:{
+            position:'absolute',
+            bottom:50,
+            width:'100%',
+        },
+        subTitleCTA:{
+            textDecorationLine:'underline'
         }
 
-    })
+    });

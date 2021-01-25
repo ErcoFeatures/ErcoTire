@@ -1,25 +1,24 @@
 import React from 'react';
 import {StyleSheet, Text, View, KeyboardAvoidingView, ImageBackground} from 'react-native';
-import { StatusBar } from 'expo-status-bar';
+import {StatusBar} from 'expo-status-bar';
 import CartItem from "../component/CartItem";
+import Car from '../component/CarList/cars'
+import CarList from "../component/CarList";
 
 const ListScreen = () => {
     return (
-        <KeyboardAvoidingView  behavior="padding" enabled style={styles.container}>
-            <View style={styles.container}>
-               <CartItem title='Model S' subTitle="Starting at $69.429"/>
-                <StatusBar style="auto"/>
-            </View>
+        <KeyboardAvoidingView behavior="padding" enabled style={styles.container}>
+            <CarList/>
         </KeyboardAvoidingView>
     );
 };
 
+export default ListScreen;
 const styles = StyleSheet.create({
 
-    container : {
-        flex:1,
-        backgroundColor:"white",
-        justifyContent:'center'
+    container: {
+        flex: 1,
+        backgroundColor: "white",
+        justifyContent: 'center'
     }
 });
-export default ListScreen;
