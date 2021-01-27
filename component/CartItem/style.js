@@ -6,10 +6,11 @@ export const styles = StyleSheet.create(
         carContainer: {
             width: '100%',
             height: Dimensions.get('window').height,
-            position:'relative'
+            position: 'relative'
         },
         titles: {
-            marginTop: "30%",
+            position:"absolute",
+            top: "65%",
             width: "100%",
             alignItems: "center"
         },
@@ -25,19 +26,18 @@ export const styles = StyleSheet.create(
 
         ,
         image: {
-            width: '100%',
-            height: '100%',
-            resizeMode: 'cover',
+            width: 400,
+            height: 400,
+            position: "absolute",
+            top:90
+        },
+        buttonContainer: {
             position: 'absolute',
-            left: 0
+            bottom: 80,
+            width: '100%',
         },
-        buttonContainer:{
-            position:'absolute',
-            bottom:80,
-            width:'100%',
-        },
-        subTitleCTA:{
-            textDecorationLine:'underline'
+        subTitleCTA: {
+            textDecorationLine: 'underline'
         }
 
     });

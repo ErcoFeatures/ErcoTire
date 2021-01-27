@@ -8,6 +8,8 @@ const CartItem = (props) => {
         <View style={styles.carContainer}>
             <ImageBackground source={image}
                              style={styles.image}
+                             width={50}
+                             height={50}
             />
             <View style={styles.titles}>
                 <Text style={styles.title}>{name}</Text>
