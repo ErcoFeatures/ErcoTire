@@ -5,6 +5,7 @@ export const styles = StyleSheet.create(
 
         carContainer: {
             width: '100%',
+            alignItems: "center",
             height: Dimensions.get('window').height,
             position: 'relative'
         },
@@ -26,10 +27,10 @@ export const styles = StyleSheet.create(
 
         ,
         image: {
-            width: 400,
-            height: 400,
+            width: 250,
+            height: 350,
             position: "absolute",
-            top:90
+            top:"20%"
         },
         buttonContainer: {
             position: 'absolute',

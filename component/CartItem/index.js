@@ -8,8 +8,6 @@ const CartItem = (props) => {
         <View style={styles.carContainer}>
             <ImageBackground source={image}
                              style={styles.image}
-                             width={50}
-                             height={50}
             />
             <View style={styles.titles}>
                 <Text style={styles.title}>{name}</Text>
@@ -23,12 +21,6 @@ const CartItem = (props) => {
                 onPress={() =>{
                     console.warn("custom order was pressed")
                 }}
-            />
-            <StyledButton type='secondary'
-                          content="existing Inventor"
-                          onPress={() =>{
-                              console.warn("existing Inventory was pressed")
-                          }}
             />
             </View>
         </View>

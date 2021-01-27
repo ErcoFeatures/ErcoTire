@@ -11,10 +11,20 @@ export default [{
   name: 'Model X',
   tagLine: 'Order Online for',
   taglineCTA: 'Touchless Delivery',
-  image: require('../../assets/images/ModelX.jpeg'),
+  image: require('../../assets/images/pneu3.png'),
+}, {
+  name: 'Model X',
+  tagLine: 'Order Online for',
+  taglineCTA: 'Touchless Delivery',
+  image: require('../../assets/images/pneu3.png'),
+}, {
+  name: 'Model X',
+  tagLine: 'Order Online for',
+  taglineCTA: 'Touchless Delivery',
+  image: require('../../assets/images/pneu3.png'),
 }, {
   name: 'Model Y',
   tagLine: 'Order Online for',
   taglineCTA: 'Touchless Delivery',
-  image: require('../../assets/images/ModelY.jpeg'),
+  image: require('../../assets/images/pneu3.png'),
 }];
