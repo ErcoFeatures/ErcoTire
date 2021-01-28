@@ -30,7 +30,7 @@ export const styles = StyleSheet.create(
             width: 250,
             height: 350,
             position: "absolute",
-            top:"20%"
+            top:"10%"
         },
         buttonContainer: {
             position: 'absolute',

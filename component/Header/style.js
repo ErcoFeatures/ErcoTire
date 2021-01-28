@@ -3,7 +3,7 @@ import {StyleSheet} from "react-native";
 export const styles = StyleSheet.create({
         container: {
             position:'absolute',
-            top:50,
+            top:0,
             zIndex:100,
             flexDirection:'row',
             justifyContent:'space-between',
