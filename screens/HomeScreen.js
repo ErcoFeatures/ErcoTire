@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, View, KeyboardAvoidingView, TouchableOpacity, Image} from 'react-native';
-
+import {Ionicons} from '@expo/vector-icons'
 import CarList from "../component/CarList";
 
 const HomeScreen = ({navigation}) => {
@@ -8,15 +8,13 @@ const HomeScreen = ({navigation}) => {
         <KeyboardAvoidingView behavior="padding" enabled style={styles.container}>
 
             <View style={styles.headerContainer}>
-            <TouchableOpacity activeOpacity={0.5}>
-                <Image style={styles.logo} source={require('../assets/images/logo.png')}/>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => navigation.navigate("Filter")} activeOpacity={0.5}>
-                <Image style={styles.menu} source={require('../assets/images/menu.png')}/>
-            </TouchableOpacity>
+                <TouchableOpacity activeOpacity={0.5}>
+                    <Image style={styles.logo} source={require('../assets/images/logo.png')}/>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate("Filter")} activeOpacity={0.5}>
+                    <Ionicons style={styles.menu} name="menu" size={24} color="#2B68E6"/>
+                </TouchableOpacity>
             </View>
-
-
             <CarList/>
         </KeyboardAvoidingView>
     );
@@ -29,31 +27,30 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: "white",
         justifyContent: 'center',
-        position:'relative'
+        position: 'relative'
     },
-    headerContainer:{
-        position:'absolute',
-        top:0,
-        zIndex:100,
-        flexDirection:'row',
-        justifyContent:'space-between',
+    headerContainer: {
+        position: 'absolute',
+        top: 0,
+        zIndex: 100,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
         width: '100%'
     },
     logo: {
-        width:100,
-        height:100,
-        resizeMode:'contain',
-        position:'absolute',
-        left:0,
-        marginLeft :10,
-        top:-15
+        width: 100,
+        height: 100,
+        resizeMode: 'contain',
+        position: 'absolute',
+        left: 0,
+        marginLeft: 10,
+        top: -15
     },
     menu: {
-        width: 25,
-        height: 25,
-        resizeMode:'contain',
-        position:'absolute',
-        right:0,
-        margin: 15
+        position: 'absolute',
+        right: 0,
+        top:25,
+        color:"#4F5155",
+        marginRight:10
     }
 });

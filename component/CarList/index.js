@@ -10,7 +10,8 @@ const CarList = () => {
             <FlatList
                 data={cars}
                 showsVerticalScrollIndicator={false}
-                renderItem={({item,id}) => <CartItem  key={id} {...item}/> }
+                renderItem={({item}) => <CartItem  {...item}/> }
+                keyExtractor={(item, id) => id.toString()}
                 snapToAlignment='start'
                 decelerationRate='fast'
                 snapToInterval={Dimensions.get('window').height}

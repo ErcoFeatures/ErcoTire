@@ -1,6 +1,7 @@
 export default [{
   name: 'Model S',
   tagLine: 'Starting at $69,420',
+  taglineCTA: 'Touchless Delivery',
   image: require('../../assets/images/pneu2.png'),
 }, {
   name: 'Model 3',
