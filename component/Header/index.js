@@ -1,12 +1,16 @@
 import React from 'react';
-import {View , Image} from "react-native";
+import {View, Image, TouchableOpacity} from "react-native";
 import {styles} from "./style";
 
-const Header = () => {
+const Header = ({navigation}) => {
     return (
         <View style={styles.container}>
-            <Image  style={styles.logo} source={require('../../assets/images/logo.png')}/>
-            <Image  style={styles.menu} source={require('../../assets/images/menu.png')}/>
+            <TouchableOpacity activeOpacity={0.5}>
+            <Image style={styles.logo} source={require('../../assets/images/logo.png')}/>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate("Filter")} activeOpacity={0.5}>
+                <Image style={styles.menu} source={require('../../assets/images/menu.png')}/>
+            </TouchableOpacity>
 
         </View>
     );
