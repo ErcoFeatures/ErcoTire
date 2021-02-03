@@ -3,7 +3,7 @@ import {View, Text, ImageBackground} from 'react-native'
 import {styles} from "./style";
 import StyledButton from "../StyledButton";
 const CartItem = (props) => {
-    const {name, tagLine, image, taglineCTA} = props
+    const {name, tagLine, image, taglineCTA} = props;
     return (
         <View style={styles.carContainer}>
             <ImageBackground source={image}

@@ -3,12 +3,11 @@ import CartItem from "../CartItem";
 import {StatusBar} from "expo-status-bar";
 import {View, FlatList, Dimensions} from "react-native";
 import {styles} from "./style";
-import cars from  './cars'
-const CarList = () => {
+const CarList = ({tires}) => {
     return (
         <View style={styles.container}>
             <FlatList
-                data={cars}
+                data={tires}
                 showsVerticalScrollIndicator={false}
                 renderItem={({item}) => <CartItem  {...item}/> }
                 keyExtractor={(item, id) => id.toString()}

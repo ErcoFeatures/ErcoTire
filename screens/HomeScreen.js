@@ -1,21 +1,29 @@
-import React from 'react';
+import React, {useEffect, useLayoutEffect, useState} from 'react';
 import {StyleSheet, Text, View, KeyboardAvoidingView, TouchableOpacity, Image} from 'react-native';
-import {Ionicons} from '@expo/vector-icons'
 import CarList from "../component/CarList";
+import data from  '../cars'
+import Header from "../component/Header";
 
-const HomeScreen = ({navigation}) => {
+const HomeScreen = ({navigation, route}) => {
+    const [tires , setTires] = useState(data);
+    const enterFilter = () => {
+        navigation.navigate("Filter")
+    };
+
+    useEffect(()=>{
+        if(route.params){
+            const filteredData =  data.filter(tire => tire.status = route.params.id);
+            setTires(filteredData);
+        }
+
+
+    }, [route])
     return (
         <KeyboardAvoidingView behavior="padding" enabled style={styles.container}>
-
-            <View style={styles.headerContainer}>
-                <TouchableOpacity activeOpacity={0.5}>
-                    <Image style={styles.logo} source={require('../assets/images/logo.png')}/>
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate("Filter")} activeOpacity={0.5}>
-                    <Ionicons style={styles.menu} name="menu" size={24} color="#2B68E6"/>
-                </TouchableOpacity>
-            </View>
-            <CarList/>
+            <Header
+                enterFilter={enterFilter}
+            />
+            <CarList tires={tires}/>
         </KeyboardAvoidingView>
     );
 };
@@ -28,29 +36,5 @@ const styles = StyleSheet.create({
         backgroundColor: "white",
         justifyContent: 'center',
         position: 'relative'
-    },
-    headerContainer: {
-        position: 'absolute',
-        top: 0,
-        zIndex: 100,
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        width: '100%'
-    },
-    logo: {
-        width: 100,
-        height: 100,
-        resizeMode: 'contain',
-        position: 'absolute',
-        left: 0,
-        marginLeft: 10,
-        top: -15
-    },
-    menu: {
-        position: 'absolute',
-        right: 0,
-        top:25,
-        color:"#4F5155",
-        marginRight:10
     }
 });
